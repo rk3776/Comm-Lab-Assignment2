@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>COMMLAB - COMIX PROJECT</title>
+  <meta name="description" content="Comic Strip project.">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <script src="jquery-3.6.0.min.js" defer></script>
+  <script src="panelsnap.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" defer></script>
+  <script src="code.js" defer></script>
+</head>
+
+<body>
+  <div class="comicContainer">
+    <section>
+      <h1 class="comicRow title">Aquarium Comic</h1>
+    </section>
+    <section class="comicRow row1">
+      <div class="comicPanel panel1"><img class="comicImage" src="images/Panel1.png"></div>
+      <div class="comicPanel panel2"><img class="comicImage" src="images/Panel2.png"></div>
+    </section>
+    <section class="comicRow row2">
+      <div class="comicPanel panel1"><img class="comicImage" src="images/Panel3.png"></div>
+      <div class="comicPanel panel2"><img class="comicImage" src="images/Panel4.png"></div>
+    </section>
+    <section class="comicRow row3">
+      <h1 id="panel5ClickText">CLICK</h1>
+      <div class="comicPanel panel1"><img class="comicImage" src="images/Panel5_1.png"></div>
+    </section>
+    <section class="comicRow row4">
+      <div class="comicPanel panel1">
+        <img class="comicImage" src="images/Panel6.png">
+        <img id="panel6BrokenGlass" src="images/Panel6_BrokenGlass.png">
+      </div>
+    </section>
+  </div>
+  
+  <img id="downwardsArrow" src="images/DownwardsArrow.png">
+  <div id="creditsContainer">
+    <img id="panel3TextB"src="images/Panel6_FlyingAxolotl.png"  style="left: 15%; height: 200px">
+    <img id="panel3TextC" src="images/bg1.jpg" style="left: 75%; height: 200px">
+    <h1>Thank you for watching our comic!</h1>
+    <div class="spacing"></div>
+    <h2>Made with love by: </h2>
+    <h2>Rock Kang</h2>
+    <h2>Ehtisham Ul Haq</h2>
+    <h2>Jun Ooi</h2>
+    <div class="spacing"></div>
+    <h2>For the Fall '21 Communications Lab</h2>
+    <h2>with Prof. Michael Allison</h2>
+  </div>
+</body>
+</html>

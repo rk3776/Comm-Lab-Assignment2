@@ -1,0 +1,369 @@
+body {
+  font-family: 'Lato';
+  margin: 0;
+  background-image: url("images/background.png");
+  background-repeat: repeat;
+  background-size: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 4em;
+}
+
+/* comics container */
+
+.comicContainer {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comicRow {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.unblur {
+  filter: brightness(1) blur(0) !important;
+  transition: all 0.5s ease;
+}
+
+.row1 .panel1 {
+  transform: translateY(-12vh);
+  flex-basis: 41.2%;
+  filter: brightness(0.2) blur(5px);
+}
+
+.row1 .panel2 {
+  transform: translateY(12vh);
+  flex-basis: 48.8%; 
+  filter: brightness(0.2) blur(5px);
+}
+
+.row2 .panel1 {
+  transform: translateY(-12vh);
+  flex-basis: 48.8%;
+  filter: brightness(0.2) blur(5px);
+}
+
+.row2 .panel2 {
+  transform: translateY(12vh);
+  flex-basis: 41.2%;
+  filter: brightness(0.2) blur(5px);
+}
+
+.row3 {
+  justify-content: center;
+}
+
+.row3 .panel1 {
+  flex-basis: 75%;
+  transform: translateY(-33%);
+}
+
+.row4 {
+  justify-content: center;
+}
+
+.row4 .panel1 {
+  flex-basis: 50%;
+}
+
+.comicPanel {
+  position: relative;
+  height: 308px;
+  background-color: white;
+  border: 4px solid black;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.comicImage {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* */
+
+@keyframes arrowBounce {
+  0% {
+    transform: translate(-50%, 0%);
+  }
+  25% {
+    transform: translate(-50%, -25%);
+  }
+  50% {
+    transform: translate(-50%, 0%);
+  }
+  75% {
+    transform: translate(-50%, 25%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
+
+#downwardsArrow {
+  position: fixed;
+  display: block;
+  bottom: 0%;
+  left: 50%;
+  height: 50px;
+  animation-name: arrowBounce;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 100%;
+  }
+}
+
+#panel1Text {
+  opacity: 0%;
+
+  position: absolute;
+  top: 10%;
+  left: 45%;
+  height: 120px;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+
+}
+
+#panel2TextB {
+  opacity: 0%;
+
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  height: 120px;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#panel2TextC {
+  opacity: 0%;
+
+  position: absolute;
+  top: 15%;
+  left: 65%;
+  height: 120px;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#panel3TextB {
+  opacity: 0%;
+
+  position: absolute;
+  top: 40%;
+  left: 17%;
+  height: 120px;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#panel3TextC {
+  opacity: 0%;
+
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  height: 120px;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes boyAnimation {
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 70%) scale(3.25);
+    opacity: 1;
+  }
+}
+
+#panel3Boy {
+  opacity: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 60px;
+  transform: translate(-50%, 20%);
+  animation-name: boyAnimation;
+  animation-duration: 8s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes clickTextAnimation {
+  50% {
+    transform: translateX(-50%) scale(1.2);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+#panel5ClickText {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  font-size: 1.5em;
+  transform: translateX(-50%);
+  animation-name: clickTextAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+
+
+@keyframes splashExplosion {
+  100% {
+    height: 750px;
+  }
+}
+
+@keyframes shakyGlass {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(2deg) scale(1.1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(-2deg) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+}
+
+#panel6BrokenGlass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  animation-name: shakyGlass;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+#panel6SplashImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0px;
+  animation-name: splashExplosion;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes axolotlFlyToScreen {
+  100% {
+    transform: scale(10);
+  }
+}
+
+@keyframes axolotlSlideDown {
+  100% {
+    transform: translateY(60vh);
+  }
+}
+
+#panel6Axolotl {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  animation-name: axolotlFlyToScreen;
+  animation-duration: 3.5s;
+  animation-timing-function: cubic-bezier(0.11, 0, 0.5, 0);
+  animation-fill-mode: forwards;
+}
+
+#panel6Axolotl.slideAnimation {
+  animation-timing-function: ease-in;
+  animation-delay: 2.5s;
+  animation-duration: 7s;
+  animation-name: axolotlSlideDown;
+}
+
+/***********************/
+
+@keyframes creditsFadeIn {
+  100% {
+    opacity: 0.8;
+  }
+}
+
+#creditsContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: black;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  color: #EFEFEF;
+  
+  animation-name: creditsFadeIn;
+  animation-play-state: paused;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+/*************************/
+
+.spacing {
+  margin: 40px;
+}
+
+.fixed {
+  display: flex;
+  flex: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+}
+
